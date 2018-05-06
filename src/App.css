@@ -1,0 +1,70 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  background-color: black;
+}
+
+.App {
+  text-align: center;
+}
+
+#car {
+  position: relative;
+}
+
+#wheel1 {
+  position: absolute;
+  left: 215px;
+  top: 300px;
+}
+
+#wheel2 {
+  position: absolute;
+  left: 925px;
+  top: 300px;
+}
+
+.accelerating {
+  animation: acc 0.5s linear infinite;
+}
+
+.deaccelerating {
+  animation: brake 0.8s linear;
+}
+
+#acc {
+  float: left;
+  margin-top: 30px;
+  margin-left: 100px;
+}
+
+#brake {
+  float: right;
+  margin-top: 30px;
+  margin-right: 100px;
+}
+
+.paddle:hover {
+  cursor: pointer;
+}
+
+@keyframes acc {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+@keyframes brake {
+    0%   {transform: rotate(0deg);}
+    100% {transform: rotate(-360deg);}
+}
+
+
+@media only screen and (max-width: 576px) {
+  #brake {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+  }
+}
